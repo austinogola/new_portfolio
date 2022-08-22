@@ -12,7 +12,7 @@ export default function Home() {
     <div className='Home'>
 
       <Head>
-        <title>Austin's Portfoli</title>
+        <title>Austin's Portfolio</title>
         <meta content='Austin Ogola' />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />

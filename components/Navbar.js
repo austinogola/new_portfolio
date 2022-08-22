@@ -1,15 +1,28 @@
-import { useEffect } from "react"
+import { useEffect,useState } from "react"
 import { Link } from 'react-scroll';
 
 
 const Navbar=()=>{
 
     useEffect(()=>{
+        let prevScroll=window.scrollY
+        const navbar=document.querySelector('.Navbar')
+        window.addEventListener('scroll',(e)=>{
+            let currScroll=window.scrollY
+            // console.log(e);
+            if(prevScroll>currScroll){
+                navbar.style.top='0'
+            }else{
+                navbar.style.top='-100px'
+            }
+            prevScroll=currScroll
 
+        })
     })
 
+
     return(
-        <div className="Navbar">
+        <div className='Navbar'>
             <div className="navbarWrapper">
 
                 <div className="logo">
@@ -42,6 +55,15 @@ const Navbar=()=>{
                     .Navbar{
                         padding-left:40px;
                         padding-right:40px;
+                        transition:.2s;
+                        /*          offset-x | offset-y | blur-radius | spread-radius | color */
+                        box-shadow: 1px 1px 2px 3px rgba(0, 0, 0, 0.23);
+                        height:80px;
+                        position:sticky;
+                        top:0;
+                        z-index: 0;
+                        width:100%;
+                        margin-bottom:50px;
                       
 
                     }
@@ -52,7 +74,8 @@ const Navbar=()=>{
                     .logo{
                         display:flex;
                         align-items:center;
-                        color:#64FFDA;
+                        /* color:#64FFDA; */
+                        color:#FFA500;
                         font-family:'Roboto',sans-serif;
                         font-size:18px;
                         letter-spacing:2px;
@@ -74,6 +97,11 @@ const Navbar=()=>{
                         color:#CCD6F6;
                         font-size:14px;
                         font-family: 'Roboto', sans-serif;
+                    }
+
+
+                    @media only screen and (max-width:1050px){
+                        
                     }
                 `}
             </style>

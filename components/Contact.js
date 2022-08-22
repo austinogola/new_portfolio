@@ -6,7 +6,7 @@ const Contact=()=>{
             <div className="wrapper">
                 <div className="title">
                     <div className="strike"></div>
-                    <h2 className="actual">What I do</h2>
+                    <h2 className="actual">Contact Me</h2>
                     <div className="strike"></div>
                 </div>
 
@@ -33,9 +33,12 @@ const Contact=()=>{
                         margin-left:4px;
                         margin-right:4px;
                         font-family:'Roboto',sans-serif;
+                        font-size:24px;
+                        letter-spacing:2px;
+                        color:#CCD6F6;
                     }
                     .strike{
-                        border:1px solid black;
+                        border:1px solid #233554;
                         height:2px;
                         width:50px;
                     }
